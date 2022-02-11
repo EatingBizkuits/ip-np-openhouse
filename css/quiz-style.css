@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.cards 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 90%;
+    flex-wrap: wrap;
+}
+
+.container 
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 63.8vw;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+/* the card itself - transition makes it such that the cards slide out smoothly and assists with end transition of hover*/
+.container .card 
+{
+    position: relative;
+    width: 19vw;
+    height: 26.4vw;
+    margin: 1vw;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in;
+    background-image: url(/assets/caard.png);
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* contents of the card all text (except number) */
+.container .card .content 
+{
+    padding: 0.5vw;
+    text-align: center;
+}
+
+.container .card .content h2 
+{
+    position: absolute;
+    top: 0;
+    right: 1.5vw;
+    font-size: 7vw;
+    color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.container .card .content h3 
+{
+    font-size:1.5vw;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.container .card .content p
+{
+    font-size:1.2vw;
+}
+
+.container .card:hover {
+    transform: translateY(-30px);
+    transition: all 0.3s ease-in;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+      background-color: lightgreen;
+    }
+
+    .container .card 
+    {
+        width: 30vw;
+        height: 45vw;
+    }
+
+    .container .card .content h2 
+    {
+        top: 4vw;
+        right: 3vw;
+    }      
+  }
+  
