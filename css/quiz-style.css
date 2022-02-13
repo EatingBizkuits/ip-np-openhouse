@@ -6,6 +6,32 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    z-index: 0;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+body
+{
+    overflow: hidden;
+}
+
+.question
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 15vh;
+    flex-wrap: wrap;
+    font-size: 5vh;
+    font-weight: 400;
+    color: black;
+    background-color: red;
+    margin-bottom: 25vh;
 }
 
 .cards 
@@ -13,7 +39,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    max-height: 100vh;
     min-width: 90%;
     flex-wrap: wrap;
 }
@@ -43,10 +69,11 @@
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-in;
-    background-image: url(/assets/caard.png);
+    background-image: url("/assets/caard.png");
     background-size: 90%;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: white;
 }
 
 /* contents of the card all text (except number) */
@@ -59,9 +86,9 @@
 .container .card .content h2 
 {
     position: absolute;
-    top: 0;
-    right: 1.5vw;
-    font-size: 7vw;
+    top: 0.5vw;
+    right: 1vw;
+    font-size: 5.5vw;
     color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
     overflow: hidden;
@@ -69,7 +96,9 @@
 
 .container .card .content h3 
 {
-    font-size:1.5vw;
+    width: 90%;
+    transform: translate(5%,-20px);
+    font-size:1.2vw;
     color: rgba(0, 0, 0, 0.2);
 }
 
@@ -78,26 +107,159 @@
     font-size:1.2vw;
 }
 
-.container .card:hover {
-    transform: translateY(-30px);
+.container .card:not(.cardclick):hover {
+    transform: translateY(-20px);
     transition: all 0.3s ease-in;
 }
+
+/* .cardclick.cardleft{
+    transform: scale(1.4) translate(60%, 20%); 
+}
+
+.cardclick.cardright{
+    transform: scale(1.4) translate(60%, -20%); 
+} */
+
+.cardclick{
+    transform: scale(1.4) translateY(30%); 
+}
+
+/* brings items before the shade */
+.forward
+{
+    z-index: 3;
+}
+
+/* allows bg to cover the entire screen, presence mandated by .hide() in quiz-script*/
+#background
+{
+    height: 100vh;
+    width: 1000vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
 
 @media screen and (max-width: 1000px) {
     body {
       background-color: lightgreen;
     }
 
+    .question {
+        margin-bottom: 25vh;
+    }
+    
     .container .card 
     {
-        width: 30vw;
-        height: 45vw;
+        width: 23vw;
+        height: 33vw;
     }
 
     .container .card .content h2 
     {
-        top: 4vw;
-        right: 3vw;
+        top: 2vw;
+        right: 2vw;
+        font-size: 6vw;
+    }     
+    
+    .container .card .content h3 
+    {
+        transform: translate(5%, -20px);
+        font-size:1.2vw;
+        color: rgba(0, 0, 0, 0.3);
+    }
+    
+  }
+
+@media screen and (max-width: 800px) {
+    body {
+      background-color: lightgoldenrodyellow;
+    }
+
+    .question {
+        margin-bottom: 35vh;
+    }
+    
+    .container .card 
+    {
+        width: 23vw;
+        height: 33vw;
+    }
+
+    .container .card .content h2 
+    {
+        top: 2vw;
+        right: 2vw;
+        font-size: 6vw;
     }      
+  }
+
+@media screen and (max-width: 450px) {
+    body {
+      background-color: lightblue;
+    }
+
+    .cards {
+        max-height: fit-content;
+    }
+
+    .question {
+        margin-bottom: 5vh;
+    }
+
+    .container .card 
+    {
+        width: 35vw;
+        height: 51vw;
+    }
+
+    .container .card .content h2 
+    {
+        top: 3vw;
+        right: 4vw;
+        font-size: 10vw;
+    }      
+
+    .container .card .content h3 
+    {
+        transform: translate(5%, -20px);
+        font-size:2.3vw;
+        color: rgba(0, 0, 0, 0.3);
+    }  
+  }
+
+@media screen and (max-width: 375px) {
+    body {
+      background-color: lightcoral;
+    }
+
+    .cards {
+        max-height: fit-content;
+    }
+
+    .question {
+        margin-bottom: 10vh;
+    }
+
+    .container .card 
+    {
+        width: 35vw;
+        height: 51vw;
+    }
+
+    .container .card .content h2 
+    {
+        top: 3vw;
+        right: 4vw;
+        font-size: 10vw;
+    }    
+
+    .container .card .content h3 
+    {
+        transform: translate(5%, -20px);
+        font-size:2vw;
+        color: rgba(0, 0, 0, 0.3);
+    }  
   }
   
