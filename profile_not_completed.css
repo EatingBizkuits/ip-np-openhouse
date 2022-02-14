@@ -239,19 +239,9 @@ font-size: 60px;
 color: white;
 letter-spacing: 10px;
 position: absolute;
-top: 55%;
+top: 58%;
 left: 50%;
 transform: translate(-50%,-50%);
-}
-.text h4 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 60px;
-  color: white;
-  letter-spacing: 10px;
-  position: absolute;
-  top: 66%;
-  left: 50%;
-  transform: translate(-50%,-50%);
 
 }
 
@@ -271,7 +261,7 @@ margin-top:30px;
 transition: .3s ease;
 transition-property: background-color, color;
 position: absolute;
-top: 80%;
+top: 75%;
 left: 50%;
 transform: translate(-50%,-50%);
 text-decoration: none;
@@ -290,11 +280,6 @@ opacity: 0.2;
 /* Media for profile completed */
 
 @media screen and (max-width: 500px) {
-  .text h4{
-    font-size:8vw;
-    display: inline-block;
-    white-space: nowrap;
-  }
 
 .text h3{
   font-size:8vw;
@@ -312,6 +297,28 @@ opacity: 0.2;
   top:15vh;
   display: inline-block;
   white-space: nowrap;
+  
 }
 
+ 
+
+
 }
+
+/* .text h4{
+    font-size:8vw;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .text h4 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 60px;
+  color: white;
+  letter-spacing: 10px;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+*/
