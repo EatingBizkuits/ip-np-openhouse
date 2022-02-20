@@ -1,0 +1,135 @@
+[{
+    "question1":["Which scenario is most valuable to you?",
+        {
+            "Answer1": "Working with like-minded individuals through trials and tribulations",
+            "Answer2": "Having things come out as intended",
+            "Answer3": "Being praised for your work",
+            "Answer4": "Never having to be disorganized ever again"
+        },
+        {
+            "Score1": [0, 50, 15, 35],
+            "Score2": [22, 21, 22, 25],
+            "Score3": [45, 10, 35, 10],
+            "Score4": [5, 30, 40, 25]
+        }
+    ],
+
+    "question2":["Does following a schedule appeal to you?",
+        {
+            "Answer1": "YES",
+            "Answer2": "NO"
+        },
+        {
+            "Score1": [0, 30, 35, 35],
+            "Score2": [40, 10, 0, 30]
+        }
+    ],
+
+    "question3":["Do you pay close attention to details?",
+        {
+            "Answer1": "YES",
+            "Answer2": "NO"
+        },
+        {
+            "Score1": [20, 40, 40, 0],
+            "Score2": [40, 0, 0, 50]
+        }
+    ],
+
+    "question4":["Do you let your heart rule your head?",
+        {
+            "Answer1": "Head over Heart",
+            "Answer2": "Heart over Head"
+        },
+        {
+            "Score1": [0, 30, 45, 25],
+            "Score2": [55, 10, 0, 25]
+        }
+    ],
+
+    "question5":["Choose the word that most represents you",  
+        {
+            "Answer1": "FOLLOW",
+            "Answer2": "LEAD",
+            "Answer3": "SOLO",
+            "Answer4": "IDEA"
+        },
+        {
+            "Score1": [45, 15, 45, 5],
+            "Score2": [10, 40, 0, 60],
+            "Score3": [0, 40, 35, 55],
+            "Score4": [40, 35, 0, 15]
+        }
+    ],
+
+    "question6":["One trait you wish to adopt",
+        {
+            "Answer1": "Methodical",
+            "Answer2": "Detail Oriented",
+            "Answer3": "Well-rounded",
+            "Answer4": "Patience"
+        },
+        {
+            "Score1": [10, 25, 30, 0],
+            "Score2": [30, 30, 35, 5],
+            "Score3": [30, 10, 10, 50],
+            "Score4": [5, 35, 35, 15]
+        }
+    ],
+
+    "question7":["What is your ideal workstyle",
+        {
+            "Answer1": "Facts and Detail",
+            "Answer2": "Fiction and Imagination"
+        },
+        {
+            "Score1": [0, 55, 55, 12],
+            "Score2": [40, 15, 0, 20]
+        }
+    ],
+
+    "question8":["What reward drives you in life",
+        {
+            "Answer1": "Mass Recognition and Praise",
+            "Answer2": "Affording what you want",
+            "Answer3": "Access and Perks",
+            "Answer4": "Praise from loved ones and friends"
+        },
+        {
+            "Score1": [70, 0, 0, 30],
+            "Score2": [0, 60, 40, 0],
+            "Score3": [0, 15, 15, 70],
+            "Score4": [50, 10, 10, 30]
+        }
+    ],
+
+    "question9":["What do you enjoy the MOST?",
+        {
+            "Answer1": "Reasoning and Debate",
+            "Answer2": "Art and Communication",
+            "Answer3": "Knowledge Accumulation",
+            "Answer4": "Loopholes searching for Efficiency"
+        },
+        {
+            "Score1": [0, 20, 30, 50],
+            "Score2": [60, 0, 20, 20],
+            "Score3": [0, 50, 0, 50],
+            "Score4": [35, 10, 20, 35]
+        }
+    ],
+
+    "question10":["What is your best subject (secondary)? (In the options)",
+        {
+            "Answer1": "Sciences (including Computer Science)",
+            "Answer2": "History/Art/Geography",
+            "Answer3": "Advanced/Elementary/N(A/T) Mathematics",
+            "Answer4": "Social Studies"
+        },
+        {
+            "Score1": [0, 40, 40, 20],
+            "Score2": [50, 25, 50, 10],
+            "Score3": [0, 20, 40, 25],
+            "Score4": [20, 30, 30, 40]
+        }
+    ]
+}]
