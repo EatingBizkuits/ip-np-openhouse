@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.section{
+    width:100%;
+}
+.section .container{
+    width: 90%;
+    display: block;
+    margin:0px auto;
+    padding:50px 0px;
+}
+.container .title{
+    width:100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.container .title h1{
+    text-transform: uppercase;
+    font-size: 35px;
+    color: black;
+}
+.container .title h1::after{
+    content:"";
+    height: 5px;
+    width: 100px;
+    background-color: #dd40f1;
+    border-radius:25px;
+    display:block;
+    margin: auto;
+}
+
+.content{
+    float:left;
+    width:55%;
+}
+.image-section{
+    float:right;
+    width:100%;
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+    
+}
+.content .article h3{
+    color: #a3a3a3;
+    font-size: 17px;
+}
+
+.content article p{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+
+}
+
+.content .article .button{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.content .article .button a{
+    text-decoration: none;
+    padding: 8px 25px;
+    background-color: #88941e;
+    border-radius: 40px;
+    color: #fff;
+    font-size:18px;
+    letter-spacing: 1.5px;
+}
+.content .article .button a:hover{
+    color:#fff;
+    background-color: #32adff;
+    transition: 1s ease;
+}
+
+.container .social{
+    width:100%;
+    clear:both;
+    margin-top: 50px;
+    text-align:center;
+    display: inline-block;
+}
+.container .social i{
+    color: black;
+    font-size:30px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    line-height: 45px;
+    text-align: center;
+    margin:0px 5px;
+}
+.container .social i::after{
+    color:purple;
+    transition: 1s ease;
+
+}
+
+
+
+.showcase{
+    width: 100%;;
+    text-align: center;
+    margin-top: 210px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    
+}
+

@@ -113,21 +113,7 @@ input[type="checkbox"]{
     color: cyan;
   }
 }
-.content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: -1;
-  width: 100%;
-  padding: 0 30px;
-  color: #1b1b1b;
-}
-.content div{
-  font-size: 40px;
-  font-weight: 700;
-}
+
 
 
 /*Navigation*/
@@ -305,20 +291,3 @@ opacity: 0.2;
 
 }
 
-/* .text h4{
-    font-size:8vw;
-    display: inline-block;
-    white-space: nowrap;
-  }
-  .text h4 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 60px;
-  color: white;
-  letter-spacing: 10px;
-  position: absolute;
-  top: 53%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-
-}
-*/
