@@ -16,22 +16,32 @@
 }
 
 body
-{
+{   
+    height: 100vh;
+    box-sizing: cover;
     overflow: hidden;
+    background-image: url("../assets/quiz-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .question
 {
+    margin-top: 12vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    /* text-align: center; */
     min-height: 15vh;
     flex-wrap: wrap;
-    font-size: 5vh;
-    font-weight: 400;
-    color: black;
-    background-color: red;
+    font-size: 1vh;
+    font-weight: 700;
+    color: #ffc400;
+    /* background-color: red; */
     margin-bottom: 25vh;
 }
 
@@ -347,3 +357,9 @@ body
     }
   }
   
+  @media screen and (min-width: 768px) {
+    .question{
+        font-size: 4vw;
+        text-align: center;
+    }
+  }
