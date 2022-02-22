@@ -321,7 +321,7 @@ function checkCookie() {
     const rawCookie = getCookie("loginID");
 
     let cookie;
-    console.log(rawCookie);
+    // console.log(rawCookie);
 
     if (rawCookie == "") {
         console.log("no cookie")
