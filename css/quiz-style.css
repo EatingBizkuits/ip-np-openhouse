@@ -70,7 +70,7 @@ body
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-in;
-    background-image: url("/assets/caard.png");
+    background-image: url("../assets/caard.png");
     background-size: 90%;
     background-position: center;
     background-repeat: no-repeat;
