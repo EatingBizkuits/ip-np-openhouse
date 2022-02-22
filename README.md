@@ -5,8 +5,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="./assets/main-logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/EatingBizkuits/ip-np-openhouse">
+    <img src="./assets/main-logo.png" alt="Logo" width="160" height="160">
   </a>
 
 <h3 align="center">IP Project - NP Open House WebApp</h3>
@@ -21,6 +21,11 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#impt">IMPORTANT</a></li>
+        <li><a href="#desProcess">Design Process</a></li>
+        <li><a href="allFeat">Features</a></li>
+            <ul><a href="#existingFeat">Existing Features</a></ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -36,7 +41,7 @@ Link to Webapp: https://eatingbizkuits.github.io/ip-np-openhouse/
 
 Interactive Design - Integrated Project (Wong Chao Hao, Dai Anqi) Updated as of: (22/2/2022)
 
-<h3>Introduction</h3>
+<h3 id="intro">Introduction</h3>
 
 <p>To have the web application act as a hook, by promoting the app before the Open House Event itself.</p>
 
@@ -44,21 +49,21 @@ Interactive Design - Integrated Project (Wong Chao Hao, Dai Anqi) Updated as of:
 
 <p>A sense of community by letting students join like-minded individuals in a group community chat to interact and make new friends!</p>
 
-<h2 style="color: red">- IMPORTANT -</h2>
+<h2 id="impt">- IMPORTANT -</h2>
 <p>This web application is intended for mobile use only. The reasoning for this is due to the nature of the activities around the application - OPEN HOUSE.</p>
 
 <p>It is not reasonable to ask one to carry a laptop around the school grounds throughout the OPEN HOUSE event, thus much effeort is used to make the webapp responsive for the users. However, due to time constraints and last minute errors, we had no choice and thus, some of the features of the application may not be optimised for desktop.<br><br> Recommended Screen Size < 760px.<br><br> Note that all functons and features have been made to support desktop, thus full functionality can be expected, albeit the lack of optimisation for CSS </p>
 
-<h2>Design Process</h2>
+<h2 id="desProcess">Design Process</h2>
 <h4>New Users</h4>
 
 Once logged in new users will be met with a profile page with the username pasted on it. A button to bring the user to the quiz, a large part of the application is shown. Attempting the quiz can allow users to be recommended a ICT course, based on the answers chosen.
 
 
-<h2>Features</h2>
+<h2 id="allFeat">Features</h2>
 These are the current features and pages of my website as well as the additional features I plan to add in the future.
 
-<h2>Existing Features</h2>
+<h2 id="existingFeat">Existing Features</h2>
 All the webpages share the same designs for the header page and footer.
 
 
