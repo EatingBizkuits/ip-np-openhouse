@@ -1,6 +1,5 @@
 const APIKEY = "6211293b34fd62156585881b";
 const url = "https://ipproj-40b5.restdb.io/rest/accounts";
-
 const courseRedirect = {
     "CSF" : "https://www.np.edu.sg/ict/Pages/csf.aspx",
     "DS" : "https://www.np.edu.sg/ict/Pages/ds.aspx#",
@@ -18,12 +17,15 @@ const courseTitle = {
 }
 
 let keptLink;
+let blankStatus = false; // disables the .click function
 
 $(document).ready(function() {
     GETrequest();
 
     $(document).on("click", "a.cta", function(){
+        if (blankStatus){
         window.open(keptLink, '_blank');
+        }
     });
 
 });
@@ -60,6 +62,7 @@ function GETrequest() {
             $("#main h4").html("").html(course);
             $(".cta").html("").html("Learn More about " + courseShort)
             keptLink = courseRedirect[String(response.course)];
+            blankStatus = true;
         } else {
             $("#main h4").html("").html("Discover your course!")
             $(".cta").attr("href", "./quiz.html");
