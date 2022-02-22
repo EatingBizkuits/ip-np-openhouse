@@ -17,8 +17,15 @@ const courseTitle = {
     "IT" : "Information Techology"
 }
 
+let keptLink;
+
 $(document).ready(function() {
     GETrequest();
+
+    $(document).on("click", "a.cta", function(){
+        window.open(keptLink, '_blank');
+    });
+
 });
 
 function GETrequest() {
@@ -51,7 +58,8 @@ function GETrequest() {
         if (courseShort != "none") {
             let course = courseTitle[courseShort];
             $("#main h4").html("").html(course);
-            $(".cta").html("").html("Learn More about " + courseShort).attr("href", courseRedirect[String(response.course)]);
+            $(".cta").html("").html("Learn More about " + courseShort)
+            keptLink = courseRedirect[String(response.course)];
         } else {
             $("#main h4").html("").html("Discover your course!")
             $(".cta").attr("href", "./quiz.html");

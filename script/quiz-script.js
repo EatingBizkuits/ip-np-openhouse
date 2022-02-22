@@ -83,6 +83,7 @@ function readTextFile(file, callback) {
 }
 
 function runOnLoad() {
+    $(".loadAnims").hide()
     $("#background").hide(); //hides the bg automatically.
     $(".submit").hide();
     
