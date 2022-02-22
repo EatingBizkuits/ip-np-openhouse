@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    z-index: 0;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* animation calls */
+/*  */
+.animation {
+    -webkit-animation-fill-mode:both;
+    -moz-animation-fill-mode:both;
+    -ms-animation-fill-mode:both;
+    animation-fill-mode: both;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    -ms-animation-duration:1s;
+    animation-duration:1s;
+}
+
+.fade-from-right {
+    animation: fade-from-right 1s;
+    }
+
+.fade-from-left {
+    animation: fade-from-left 1s;
+    }
+
+.skewed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3e50;
+    z-index: 1;
+    transform: skewY(-0deg);
+    transform-origin: top left;
+    animation:loadingCut 0.7s;
+    }
+
+.drop-from-top {
+    animation: drop-from-top 1s 
+}
+
+/* animation calls end */
+
+
+/* css for login start */
+.bg-login {
+    background-image: url("../assets/npBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-p {
+    width: 100%;
+    height: 100vh;
+    /* shade for background */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-p {
+    display: flex;
+    justify-content: center;
+    width: 50vh;
+    height: 70vh;
+    box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 35px;
+    perspective: 1000px;
+    /* gives a sense of depth when flipping */
+    background-color: rgb(102, 102, 102); 
+}
+
+.inner-box {
+    position: relative;
+    width: 50vh;
+    height: 70vh;
+    /* transform: rotateY(-180deg); */
+    transform-style: preserve-3d;
+    background-image: linear-gradient(45deg, #31C1A9, #C13131);
+    background-size: 1000%;
+    background-position: left;
+    transition: none;
+    animation-delay: 1s;
+    border-radius: 35px;
+}
+
+.login, .register {
+    position: absolute;
+    width: 50vh;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    padding: 10vh;
+    box-sizing: border-box;
+    backface-visibility: hidden;  
+    /* hides the back when flipped */
+    left: -2vh;
+    border-radius: 35px;  
+    /* border curve can be seen when spinning */
+}
+
+.register {
+    transform: rotateY(180deg);
+}
+
+.tempColor {
+    background-image: linear-gradient(45deg, #31C1A9, #C13131);
+    background-size: 1000%;
+    background-position: right;
+    left: 0;
+}
+
+.card-p h2 {
+    position: relative;
+    font-weight: 900;
+    font-size: 6vh;
+    text-align: center;
+    margin-bottom: 2vh;
+    left: 2.8vh;
+
+}
+
+.register form, .register .btn-p, 
+.card-p .register h2{
+    position: relative;
+    left: -3.5vh;
+    top: -2vh;
+}
+
+.card-p .register h2 {
+    left: -2.5vh;
+    top: -3vh;
+}
+
+
+.input-box {
+    width: 100%;
+    background: transparent;
+    border: 1px solid white;
+    margin: 20px;
+    height: 5vh;
+    border-radius: 50px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color: white;
+    font-size: 2vh;
+}
+
+.input-box:focus {
+    border: 5px solid orange;
+}
+
+::placeholder {
+    color: white;
+    font-size: 1.5vh;
+    letter-spacing: 0.1vw;
+    text-transform: uppercase;
+    text-overflow: none;
+    line-height: 2vh;
+}
+
+button {
+    width: 70%;
+    background: transparent;
+    border: 1px solid white;
+    margin: 25px 20% 10px;
+    height: 6vh;
+    font-size: 1.5vh;
+    text-transform: uppercase;
+    border-radius: 70px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    color: white;
+}
+
+.submit-btn {
+    position: relative;
+    border: 5px solid white;
+}
+
+span {
+    position: relative;
+    display: inline;
+    font-size: 1.5vh;
+    letter-spacing:0.1vw;
+    margin-left: 10px;
+    left: 10px;
+    top: -2px;
+}
+
+.ckbox {
+    transform: scale(1.5);
+    position: relative;
+    display: inline-block;
+    margin-left: 30%;
+    margin-top: 5%;
+    left: 10px;
+    border-radius: 30px;
+    
+}
+
+.card-p .btn-p {
+   margin-top: 20px;
+   background-color:rgba(248, 34, 34, 0.7);
+   
+}
+
+.register .btn-p {
+    background-color: rgba(49, 193, 169, 0.8);
+}
+
+.card-p a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 8px;
+    left: 15px;
+}
+/* css for login end */
+
+/* css for lottie start*/
+
+.loadAnims{
+    /* box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    top: 0; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* css for lottie end*/
+
+/* css for alert start*/
+#alertHead {
+    position: absolute;
+    width: 100%;
+    padding: 3vh;
+    z-index: 3;
+    background-color: rgba(241, 61, 61, 0.8);
+    text-align: center;
+    color: white;
+    font-size: 1.5vh;
+    text-transform: uppercase;
+}
+/* css for alert end*/
+
+@keyframes loadingCut {
+    0% {
+        transform: skewY(-90deg);
+    }
+
+    100% {
+        transform: skewY(-0deg);
+    }
+}
+
+@keyframes drop-from-top {
+    0% {
+        transform: translateY(-10vw);
+    }
+    100% {
+        transform: translateY(0vw);
+    }
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+@keyframes fade-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-from-right {
+    0% {
+        opacity: 0;
+        transform: translateX(10vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 380px) {
+    .bg-login {
+        background-position: -40vh;
+    }
+
+    .card-p {
+        position: absolute;
+        display: flex;
+        width: 90vw;
+        height: 70vh;
+        left: 5vw;
+        top: 30vw;
+    }
+
+    .inner-box {
+        width: 90vw;
+        height: 70vh;
+    }
+
+    .login, .register {
+        width: 80vw;
+        height: 70vh;
+        position: relative;
+        top: 5vw;
+        left: -2.5vw;
+        padding: 0;
+    }
+
+    .register {
+        position: relative;
+        top: -64vh;
+        left: 2vw;
+    }
+
+    #toRegister {
+        width: 24vh;
+        position: relative;
+        left: 7vw;
+    }
+
+    .login .btn-p {
+        left: 0vw;
+    }
+
+    ::placeholder, .submit-btn, span {
+        font-size: 3vw;
+    }
+
+    h2.title {
+        font-size: 14vw;
+    }
+
+    .tempColor {
+        background-image: none;
+    }
+}

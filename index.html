@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- max scale prevents zoom in -->
+    <title>Document</title>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    
+    <div class="bg-login">
+        <div id="alertHead" class="alertHead">alert</div>
+        <div class="container-p">
+            <div class="card-p">
+                <div class="inner-box">
+                    <div class="login"> <!-- front -->
+                        <h2 class="title">LOGIN</h2>
+                        <form>
+                            <input id="username" type="text" class="input-box" placeholder="Your Username"  autocomplete="off" required>
+                            <input id="password" type="password" class="input-box" placeholder="Password"  autocomplete="off" required>
+                            <!-- autocomplete= "off" prevents past inputs from showing -->
+                            <button id="submit-button" type="submit" class="submit-btn">Submit</button>
+                            <input id="chkbox" class="ckbox" type="checkbox"><span id="chkbox-txt">Remember Me</span>
+                        </form>
+                        <button type="submit" id="toRegister" class="btn-p">I'm new here</button>
+                        <!-- <a href="#">Forgot Password</a> -->
+                    </div>
+                    <div class="register"> <!-- back -->
+                        <h2 class="title">REGISTER</h2>
+                        <form>
+                            <input type="text" class="input-box UN" placeholder="Your Username" autocomplete="off" required>
+                            <input type="password" class="input-box PW" placeholder="Password" autocomplete="off" required>
+                            <input type="password" class="input-box RPW" placeholder="Confirm Password" autocomplete="off" required>
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </form>
+                        <button type="submit" class="btn-p">I have an account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="lottie">
+        <div class="loadAnims">
+            <div style="display: block">
+                <lottie-player class="" src="https://assets2.lottiefiles.com/packages/lf20_qiuhvo9f.json"  background="transparent"  speed="0.7"  style="width: 60vh; height: 60vh;"  loop autoplay></lottie-player>    <!--margin-left: 34.5vw; margin-top: 20vh;--> 
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<!-- lottiefiles -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<!-- cookies! -->
+<script  type="application/javascript" async src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+<script type="text/javascript" defer src="./script/login-script.js"></script>
+
+</html>

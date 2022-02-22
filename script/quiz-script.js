@@ -8,7 +8,8 @@ let question;   // holds questions
 let answers;
 let points;
 
-
+const APIKEY = "6211293b34fd62156585881b";
+const url = "https://ipproj-40b5.restdb.io/rest/accounts";
 const halfX = window.innerWidth/2;
 const halfY = window.innerHeight/2;
 const courseName = ["IM", "CSF", "DS", "IT"]
@@ -86,7 +87,6 @@ function runOnLoad() {
     $(".submit").hide();
     
     runOnSubmit(false);
-
 }
 
 function runOnSubmit(cardSelected) {
@@ -101,14 +101,18 @@ function runOnSubmit(cardSelected) {
             let topScore = arrayMax(Scores);
                     
             $(".cards").hide();
-            $(".question").hide();
+            // $(".question").hide();
 
             const bestCourse = courseName[Scores.indexOf(topScore)];
 
-            $("#answer").html("<h1 class = 'answer'> Your Course is: " 
-                    + bestCourse 
-                    +"</h1>")
-            
+            //display test result
+
+            // $("#answer").html("<h1 class = 'answer'> Your Course is: " 
+            //         + bestCourse 
+            //         +"</h1>")
+            // push into db
+
+            insertIntoDB(bestCourse);
         } else {
 
             // insert score calc here start
@@ -214,3 +218,65 @@ function scoreCalc(cardSelected)
 function arrayMax(numArray) {
     return Math.max.apply(null, numArray);
   }
+
+
+function getCookie(cookieKey) {
+    let name = cookieKey + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+function insertIntoDB(quizResult) {
+    lottieAnim();
+    let cookies = getCookie("loginID");
+    console.log(cookies);
+    if (cookies == "") {
+        console.log("no stored cookies");
+        return 0
+    } else {
+        cookies = cookies.split(",")
+    }
+
+    let jsondata = {
+        "course": quizResult
+    };
+
+    let settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": url + "/" + String(cookies[0]),
+        "method": "PUT",
+        "headers": {
+            "content-type": "application/json",
+            "x-apikey": APIKEY,
+            "cache-control": "no-cache"
+        },
+        "processData": false,
+        "data": JSON.stringify(jsondata)
+    }
+    
+    $.ajax(settings).done(function (response) {
+        // lottieFade(); return to main page
+        $(location).attr("href", "./profile_completed.html");
+    });    
+}
+
+function lottieAnim() {
+    $(".lottie").show();
+    $(".loadAnims").addClass("skewed");
+    window.setTimeout(function(){
+        $("nav").hide();
+        $("#navigation").hide();
+        $("#main").hide();
+    }, 700);
+}

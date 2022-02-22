@@ -150,6 +150,40 @@ body
 
 }
 
+/* for lottie start */
+
+.loadAnims{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.skewed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3e50;
+    z-index: 1;
+    transform: skewY(-0deg);
+    transform-origin: top left;
+    animation:loadingCut 0.7s;
+}
+  
+@keyframes loadingCut {
+    0% {
+        transform: skewY(-90deg);
+    }
+  
+    100% {
+        transform: skewY(-0deg);
+    }
+  }
+/* for lottie end */
+
 
 @media screen and (max-width: 1000px) {
     body 

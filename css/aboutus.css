@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+*{
+    width: 100%;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    overflow-x: hidden;
+    
+}
+
+body {
+    background-image: url("../assets/ngee\ ann.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section{
+    width:100%;
+}
+.section .container{
+    width: 100%;
+    display: block;
+    margin:0px auto;
+    padding:50px 0px;
+}
+
+.container .title{
+    width:100%;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+.container .title h1{
+    text-transform: uppercase;
+    font-size: 35px;
+    color: white;
+}
+.container .title h1::after{
+    content:"";
+    height: 5px;
+    width: 100px;
+    background-color: #dd40f1;
+    border-radius:25px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article * {
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+}
+
+.image-section{
+    box-sizing: cover;
+    width:100%;
+}
+.image-section img{
+    height: auto;
+}
+
+iframe {
+    width: 90%;
+    height: 50vw;
+}
+
+/* text sizing */
+.content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shadow {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 70%;
+    border-radius: 30px 30px 0 0;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .article *{
+    /* background-color: red; */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .article h3{
+    color: #a3a3a3;
+    font-size: 27px;
+}
+
+.content article p{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.content .article .button{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.content .article .button a{
+    text-decoration: none;
+    padding: 8px 25px;
+    background-color: #88941e;
+    border-radius: 40px;
+    color: #fff;
+    font-size:18px;
+    letter-spacing: 1.5px;
+    width: 50vh;
+    padding: 3vh;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+}
+.content .article .button a:hover{
+    color:#fff;
+    background-color: #32adff;
+    transition: 1s ease;
+}
+
+
+.showcase{
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    text-align: center;
+    padding-top: 210px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    background-color: white;
+}
+
+.space {
+    width: 100vw;
+    height: 60vw;
+}
+
+.social {
+    background-color: black;
+    height: 15vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+i {
+    width: 4vh;
+    justify-content: center;
+    color: white;
+    transform: scale(200%);
+}
+
+/* NavBar Start*/
+nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    padding: 0 50px 0 120px;
+    /* color of bg */
+    background: black;
+    align-items: center;
+    justify-content: space-between;
+    
+    /* flex-wrap: wrap; */
+    overflow: hidden;
+
+  }
+  
+  nav .logo{
+    /* sets color of NP title */
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  nav ul{
+    display: flex;
+  }
+  
+  nav ul li{
+    margin: 0 5px;
+    overflow: hidden;
+  }
+  
+  nav ul li a{
+    /* sets default color of options */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 55px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover{ 
+    /* hover effect of nav options on desktop */
+    padding: 20px;
+    color: #1b1b1b;
+    background: white;
+  }
+  
+  nav .menu-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav .menu-btn i{
+    /* sets color of menu icon */
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    margin-left: 2vh;
+    transform: scale(90%);
+  }
+  
+  input[type="checkbox"]{
+    display: none;
+  }
+  
+  @media (max-width: 1000px){
+    nav{
+      padding: 0 40px 0 50px;
+    }
+  }
+  @media (max-width: 920px) {
+    nav .menu-btn i{
+      display: block;
+    }
+    #click:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+    nav ul{ /* fonts in nav mobile*/
+      position: fixed;
+      top: 30px;
+      left: -100%;
+      background: black;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+      left: 0;
+    }
+    nav ul li{
+      width: 100%;
+      margin: 40px 0;
+    }
+    nav ul li a{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a{
+      margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover{
+      background: none;
+      color: cyan;
+    }
+  }
+  
+  nav {
+    position: fixed;
+    z-index: 100;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+  }
+  
+  .logo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 2vh;
+  }
+  
+  nav .nav-links ul {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  nav .nav-links ul li {
+    padding: 0 4px;
+    list-style: none;
+  }
+  
+  nav .nav-links ul li img {
+    transform: scale(0.45);
+    right: 5%;
+    
+  }
+  /* NavBar End */
